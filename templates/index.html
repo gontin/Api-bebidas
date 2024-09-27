@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bananinha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bem vindo a n sei o nome do site</h1>
+    </header>
+
+    <div class="caixa">
+        <h2>bananinha</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bebida in bebidas %}
+                    <tr>
+                        <td>{{ bebida['strDrink'] }}</td>
+                        <td>{{ bebida['strCategory'] }}</td>
+                        <td>{{ bebida['strInstructions'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
